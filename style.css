@@ -63,6 +63,7 @@ body {
     grid-template-columns: repeat(4,1fr);
     min-width: 1000px;
     column-gap: 30px;
+    row-gap: 30px;
 }
 .footer__wrapper {
     display: flex;

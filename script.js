@@ -39,3 +39,13 @@ fetch('https://api.openweathermap.org/data/2.5/weather?id=491687&appid=d847c38e8
     document.querySelector('.smolensk__desc').textContent = smolensk.weather[0] ['description'];
     document.querySelector('.smolensk_img').innerHTML = `<img src="http://openweathermap.org/img/wn/${smolensk.weather[0] ['icon']}@2x.png">`;
 })
+
+fetch('https://api.openweathermap.org/data/2.5/weather?id=569223&appid=d847c38e8f16bd0ec95642f8e1919809')
+.then(function(resp) {return resp.json()})
+.then(function(che) {
+    
+    document.querySelector('.che_name').textContent = che.name;
+    document.querySelector('.che_weather').innerHTML = Math.round(che.main.temp - 273)+'&deg;'
+    document.querySelector('.che__desc').textContent = che.weather[0] ['description'];
+    document.querySelector('.che_img').innerHTML = `<img src="http://openweathermap.org/img/wn/${che.weather[0] ['icon']}@2x.png">`;
+})
